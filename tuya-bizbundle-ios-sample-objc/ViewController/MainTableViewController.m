@@ -170,6 +170,8 @@
                 case 0:
                     [self gotoMiniApp];
                     break;
+                case 1:
+                    [self gotoMiniWidget];
                 default:break;
             }
             break;
@@ -269,6 +271,11 @@
 - (void)gotoMiniApp {
     // 以id形式打开小程序
     [[ThingMiniAppClient coreClient] openMiniAppByAppId:@"tydhopggfziofo1h9h"];
+}
+
+- (void)gotoMiniWidget {
+    // 打开小部件
+    [[ThingMiniAppClient widgetClient] showWidgetDialogInView:self.view url:@"godzilla://tyvr5foscvxwog5byi/cards/info/index?miniWidgetStyle=0.52"];
 }
 
 
