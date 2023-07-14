@@ -275,7 +275,8 @@
 
 - (void)gotoMiniWidget {
     // 打开小部件
-    [[ThingMiniAppClient widgetClient] showWidgetDialogInView:self.view url:@"godzilla://tyvr5foscvxwog5byi/cards/info/index?miniWidgetStyle=0.52"];
+    UIView *view = [[[UIApplication sharedApplication] delegate] window];
+    [[ThingMiniAppClient widgetClient] showWidgetDialogInView:view url:@"godzilla://tyvr5foscvxwog5byi/cards/info/index?miniWidgetStyle=0.60"];
 }
 
 
